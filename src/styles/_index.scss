@@ -1,0 +1,30 @@
+@import './mixins';
+@import './navbar';
+@import './stayslist';
+@import './map';
+@import './footer';
+@import './stay-details';
+@import './variables';
+body {
+  margin: 0;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  margin-top: 6rem;
+}
+
+@include mediaLg {}
+
+@include mediaMd {
+  .main-container {
+    grid-template-columns: auto;
+  }
+}
+
+@include mediaSm {
+  .main-container {
+    grid-template-columns: auto;
+  }
+}

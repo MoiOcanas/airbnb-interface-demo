@@ -1,0 +1,14 @@
+@import './mixins';
+.map {
+  height: 100vh;
+  padding-top: 80px;
+  margin-top: -96px;
+  position: sticky;
+  top: 0px;
+}
+
+@include mediaSm {
+  .map {
+    display: none;
+  }
+}

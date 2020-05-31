@@ -1,0 +1,182 @@
+@import './mixins';
+
+.stays-list-container {
+    padding: 34px 24px;
+    .stays-list-header {
+        h6 {
+            font-size: 14px;
+            line-height: 18px;
+            color: $dark-gray;
+            padding-bottom: 8px;
+        }
+        h4 {
+            color: $dark-gray;
+            font-weight: bold;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+}
+
+.topics-list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    .topics-list-element {
+        padding: 0.3rem 1rem;
+        border: 1px solid rgb(176, 176, 176);
+        border-radius: 24px;
+        margin: 2px;
+    }
+}
+
+.stay {
+    padding: 10px 8px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    border-bottom: 1px solid $light-gray;
+    &:first-child {
+        margin-top: 3rem;
+    }
+    .slider {
+        height: 100%;
+        border-radius: 0.5rem;
+    }
+    .stay-content {
+        height: 200px;
+        margin-left: 16px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+            .stay-content-header {
+                font-size: 14px;
+                line-height: 18px;
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                #stars {
+                    i {
+                        color: #FF385C;
+                    }
+                }
+            span {
+                border-radius: 4px;
+                border: solid 1px $dark-gray;
+                color: $dark-gray;
+                display: inline-block;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 1px 5px;
+                font-size: 12px;
+                line-height: 16px;
+            }
+            p {
+                color: $gray;
+                flex: 1;
+                line-height: 20px;
+                max-height: 20px;
+                overflow: hidden;
+                margin-left: 6px;
+                margin-bottom: 8px;
+            }
+            #stars {
+                display: inline;
+                border: none;
+                color: $gray;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                margin-left: 5px;;
+            }
+        }
+        .stay-title {
+            font-weight: 600;
+            color: $dark-gray;
+            font-size: 18px;
+            margin-top: -12px;
+            line-height: 24px;
+
+            a {
+                color: $dark-color;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .skills {
+            display: flex;
+            flex-direction: row;
+            margin-top: 1rem;
+            #skill {
+                color: $gray;
+                margin: 0px 2px;
+            }
+        }
+        .stay-content-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .price {
+                align-items: center;
+                color: $dark-gray;
+                font-weight: bold;
+                display: flex;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 24px;
+                justify-content: flex-end;
+                span {
+                    font-weight: 400;
+                    color: $gray;
+                    margin-left: 5px;
+                }
+            }
+            .total {
+                color: $gray;
+            }
+        }
+    }
+}
+
+@include mediaLg {
+
+}
+@include mediaMd {
+    .stay {
+        grid-template-columns: 40% 60%;
+    }
+}
+
+@include mediaSm {
+    .stays-list-container {
+      padding: 0;
+      .stays-list-header {
+          padding: 2rem;
+
+          h4 {
+            text-align: center;
+          }
+
+          .topics-list {
+              flex-direction: column;
+              width: 90%;
+              margin: 0 auto;
+              text-align: center;
+              padding: 1rem 0;
+              .topics-list-element {
+                  margin: 0.2rem 0;
+              }
+          }
+      }
+    }
+
+    .stay {
+        grid-template-columns: auto;
+        padding: 0.5rem 1.5rem;
+
+        .slider {
+            height: 230px;
+        }
+    }
+}
